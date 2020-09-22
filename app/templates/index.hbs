@@ -1,0 +1,7 @@
+<Dashboard>
+    <div class="row">
+        {{#each @model.results as |movie| }}
+        <Movies @movie={{movie}}></Movies>
+        {{/each}}
+    </div>
+</Dashboard>

@@ -24,6 +24,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.API_TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NTRiYTE2NGUzNTY0NGEyMzU5NjE3MzUzYzYxOWU2ZiIsInN1YiI6IjVmNjM5MWY0MDgxNmM3MDAzOWI4ZTA3MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.KiiIbBQfzSgeIEOsX2sNIAsELcNY0bM56isdGr9nANQ'
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
