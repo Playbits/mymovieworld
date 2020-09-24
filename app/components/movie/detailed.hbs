@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 movie-details px-0">
+            <img src="https://image.tmdb.org/t/p/w500/{{@movie.poster_path}}" class="w-100" alt="{{@movie.title}}">
+            <table class="table table-bordered table-hover">
+                <tbody>
+                    <tr>
+                        <td> Title </td>
+                        <td> {{@movie.title}} </td>
+                    </tr>
+                    <tr>
+                        <td> Genres </td>
+                        <td>
+                            <ul>
+                                {{#each @movie.genres as |genre|}}
+                                <li> {{ genre.name }} </li>
+                                {{/each}}
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Spoken Languages</td>
+                        <td>
+                            <ul>
+                                {{#each @movie.spoken_languages as |language|}}
+                                    <li> {{language.name}} </li>
+                                {{/each}}
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Produced by </td>
+                        <td>
+                            <ul>
+                                {{#each @movie.production_companies as |company|}}
+                                <li>
+                                    {{#if company.logo_path}}
+                                    <p class="text text-muted m-0"> {{company.name}} </p>
+                                    <img src="https://image.tmdb.org/t/p/w500/{{company.logo_path}}" class="w-25" alt="{{company.name}}">
+                                    {{else}}
+                                    {{company.name}}
+                                    {{/if}}
+                                    <hr>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Overview </td>
+                        <td> {{@movie.overview}} </td>
+                    </tr>
+                    <tr>
+                        <td> Released Date </td>
+                        <td> {{@movie.release_date}} </td>
+                    </tr>
+                    <tr>
+                        <td> Popularity </td>
+                        <td> {{@movie.popularity}} </td>
+                    </tr>
+                    <tr>
+                        <td> Ratings </td>
+                        <td> {{@movie.vote_average}} </td>
+                    </tr>
+                    {{!-- genres: [{…}]
+homepage: ""
+id: 694919
+imdb_id: "tt7286966"
+original_language: "en"
+original_title: "Money Plane"
+overview: "A professional thief with $40 million in debt and his family's life on the line must commit one final heist - rob a futuristic airborne casino filled with the world's most dangerous criminals."
+popularity: 2028.856
+poster_path: "/6CoRTJTmijhBLJTUNoVSUNxZMEI.jpg"
+production_companies: (2) [{…}, {…}]
+production_countries: [{…}]
+release_date: "2020-09-29"
+revenue: 0
+runtime: 82
+spoken_languages: [{…}]
+status: "Released"
+tagline: ""
+title: "Money Plane"
+video: false
+vote_average: 8.3
+vote_count: 2 --}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

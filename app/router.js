@@ -7,5 +7,5 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  this.route("about", { path: "/get-in-touch"});
+  this.route("movie", { path: "/movie/:movie_id" });
 });
