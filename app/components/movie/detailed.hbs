@@ -2,12 +2,18 @@
     <div class="row justify-content-center">
         <div class="col-md-6 movie-details px-0">
             <img src="https://image.tmdb.org/t/p/w500/{{@movie.poster_path}}" class="w-100" alt="{{@movie.title}}">
-            <table class="table table-bordered table-hover">
+            <table class="table table-bordered table-hover table-striped">
                 <tbody>
                     <tr>
                         <td> Title </td>
                         <td> {{@movie.title}} </td>
                     </tr>
+                    {{#if @movie.budget }}
+                    <tr>
+                        <td> Budget </td>
+                        <td> ${{@movie.budget}} </td>
+                    </tr>
+                    {{/if}}
                     <tr>
                         <td> Genres </td>
                         <td>
@@ -23,7 +29,7 @@
                         <td>
                             <ul>
                                 {{#each @movie.spoken_languages as |language|}}
-                                    <li> {{language.name}} </li>
+                                <li> {{language.name}} </li>
                                 {{/each}}
                             </ul>
                         </td>
@@ -36,7 +42,8 @@
                                 <li>
                                     {{#if company.logo_path}}
                                     <p class="text text-muted m-0"> {{company.name}} </p>
-                                    <img src="https://image.tmdb.org/t/p/w500/{{company.logo_path}}" class="w-25" alt="{{company.name}}">
+                                    <img src="https://image.tmdb.org/t/p/w500/{{company.logo_path}}" class="w-25"
+                                        alt="{{company.name}}">
                                     {{else}}
                                     {{company.name}}
                                     {{/if}}
